@@ -1,0 +1,147 @@
+/* Fuente general */
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #f5f8fa;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Banner principal */
+.banner {
+  background: linear-gradient(rgba(0, 72, 130, 0.6), rgba(0, 72, 130, 0.6)),
+              url('https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e') center/cover no-repeat;
+  color: white;
+  text-align: center;
+  padding: 120px 20px;
+}
+
+.banner h1 {
+  font-size: 2.8rem;
+  margin-bottom: 10px;
+}
+
+.banner .subtitulo {
+  font-size: 1.2rem;
+  color: #e0f7fa;
+}
+
+/* Secciones generales */
+section {
+  padding: 60px 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+h2 {
+  text-align: center;
+  color: #01579b;
+  margin-bottom: 30px;
+}
+
+/* Intro */
+.intro-contenido p {
+  margin-bottom: 15px;
+}
+
+/* Cards */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: #e1f5fe;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+/* Lista */
+ul {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+}
+
+ul li {
+  background: #b3e5fc;
+  margin: 10px auto;
+  padding: 10px;
+  border-radius: 8px;
+  width: fit-content;
+}
+
+/* Frases */
+blockquote {
+  font-style: italic;
+  background: #e1f5fe;
+  padding: 15px;
+  border-left: 4px solid #0288d1;
+  margin: 20px auto;
+  max-width: 600px;
+}
+
+/* Footer */
+.footer {
+  background-color: #e3f2fd;
+  text-align: center;
+  padding: 20px 10px;
+  font-size: 1rem;
+  color: #01579b;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  border-top: 2px solid #b3e5fc;
+}
+
+.footer p {
+  margin: 0;
+  animation: fadeIn 2s ease;
+}
+
+/* Footer */
+.footer {
+  background: linear-gradient(to right, #e3f2fd, #f5f8fa);
+  text-align: center;
+  padding: 25px 10px 35px;
+  color: #01579b;
+  border-top: 2px solid #b3e5fc;
+  animation: fadeIn 2s ease;
+}
+
+.footer p {
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+/* Botón "Volver" */
+.btn-volver {
+  display: inline-block;
+  background-color: #0288d1;
+  color: white;
+  text-decoration: none;
+  padding: 10px 22px;
+  border-radius: 25px;
+  font-weight: 600;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn-volver:hover {
+  background-color: #01579b;
+  transform: scale(1.05);
+}
+
+/* Animación suave */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
