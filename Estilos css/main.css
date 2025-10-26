@@ -1,0 +1,543 @@
+/* ===== ESTILOS BASE MEJORADOS ===== */
+:root {
+  --primary: #4361ee;
+  --secondary: #3a0ca3;
+  --accent: #4cc9f0;
+  --light: #f8f9fa;
+  --dark: #212529;
+  --success: #4bb543;
+  --warning: #ffd166;
+  --danger: #ef476f;
+  --gradient: linear-gradient(135deg, #4361ee 0%, #3a0ca3 100%);
+  --shadow: 0 8px 25px rgba(0,0,0,0.1);
+  --shadow-hover: 0 15px 35px rgba(0,0,0,0.15);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  color: var(--dark);
+  line-height: 1.6;
+  padding-top: 80px;
+  min-height: 100vh;
+}
+
+/* ===== CONTENIDO PRINCIPAL MEJORADO ===== */
+.main-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+section {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  margin: 2.5rem 0;
+  padding: 3rem 2.5rem;
+  border-radius: 20px;
+  box-shadow: var(--shadow);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  position: relative;
+  overflow: hidden;
+}
+
+section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: var(--gradient);
+}
+
+h2 {
+  color: var(--secondary);
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  font-weight: 700;
+  position: relative;
+}
+
+h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 4px;
+  background: var(--gradient);
+  border-radius: 2px;
+}
+
+/* ===== TARJETAS BONITAS ===== */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.card {
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+  padding: 2rem;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: var(--shadow);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: var(--gradient);
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-hover);
+}
+
+.card h3 {
+  color: var(--secondary);
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.card p {
+  color: var(--dark);
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* ===== LISTAS MEJORADAS ===== */
+.señales-list {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.señal-item {
+  background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+  padding: 1.5rem;
+  border-radius: 12px;
+  border-left: 4px solid var(--accent);
+  transition: transform 0.3s ease;
+}
+
+.señal-item:hover {
+  transform: translateX(8px);
+}
+
+.señal-item h4 {
+  color: var(--secondary);
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+/* ===== EMERGENCIA BONITA ===== */
+.emergency-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.emergency-card {
+  background: linear-gradient(135deg, #ffe6e6 0%, #ffcccc 100%);
+  padding: 2rem;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: var(--shadow);
+  border: 2px solid var(--danger);
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.emergency-card::before {
+  content: '🚨';
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--danger);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 25px;
+  font-size: 1.2rem;
+}
+
+.emergency-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 20px 40px rgba(239, 71, 111, 0.2);
+}
+
+.emergency-card h3 {
+  color: var(--danger);
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.emergency-card p {
+  margin-bottom: 0.5rem;
+}
+
+/* ===== ORGANIZACIONES MEJORADAS ===== */
+.org-list {
+  display: grid;
+  gap: 2rem;
+}
+
+.org-item {
+  background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+  padding: 2rem;
+  border-radius: 16px;
+  border-left: 4px solid var(--primary);
+  transition: all 0.3s ease;
+}
+
+.org-item:hover {
+  transform: translateX(10px);
+  box-shadow: var(--shadow-hover);
+}
+
+.org-item h3 {
+  color: var(--secondary);
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+
+.org-item a {
+  display: inline-block;
+  background: var(--gradient);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 600;
+  margin-top: 1rem;
+  transition: all 0.3s ease;
+}
+
+.org-item a:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(67, 97, 238, 0.3);
+}
+
+/* ===== APPS BONITAS ===== */
+.apps-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1.5rem;
+}
+
+.app-item {
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+  padding: 1.5rem 1rem;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: var(--shadow);
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+}
+
+.app-item:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-hover);
+}
+
+.app-item h4 {
+  color: var(--secondary);
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+/* ===== CITAS ELEGANTES ===== */
+.quotes-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+blockquote {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  padding: 2rem;
+  border-radius: 16px;
+  margin: 1.5rem 0;
+  border-left: 4px solid var(--accent);
+  font-style: italic;
+  font-size: 1.1rem;
+  position: relative;
+  box-shadow: var(--shadow);
+}
+
+blockquote::before {
+  content: '"';
+  font-size: 4rem;
+  color: var(--accent);
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  opacity: 0.3;
+  font-family: serif;
+}
+
+/* ===== FOOTER ELEGANTE ===== */
+.footer {
+  background: linear-gradient(135deg, var(--secondary) 0%, var(--primary) 100%);
+  color: white;
+  text-align: center;
+  padding: 3rem 2rem;
+  margin-top: 4rem;
+  position: relative;
+}
+
+.footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: var(--accent);
+}
+
+.footer p {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+
+/* ===== NUEVOS ESTILOS PARA LA INFORMACIÓN EXTRA ===== */
+
+/* Tips dentro de las tarjetas */
+.tip {
+  background: rgba(67, 97, 238, 0.1);
+  padding: 0.8rem;
+  border-radius: 8px;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  border-left: 3px solid var(--accent);
+}
+
+/* Grid para emociones */
+.emociones-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.emocion-card {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+  border-left: 4px solid var(--accent);
+}
+
+.emocion-card h4 {
+  color: var(--secondary);
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.emocion-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.emocion-card li {
+  margin-bottom: 0.8rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.emocion-card li::before {
+  content: '•';
+  color: var(--primary);
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+}
+
+/* Técnicas rápidas */
+.tecnicas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.tecnica-card {
+  background: linear-gradient(135deg, #e0f2fe 0%, #b3e5fc 100%);
+  padding: 1.5rem;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: var(--shadow);
+}
+
+.tecnica-card h4 {
+  color: var(--secondary);
+  margin-bottom: 1rem;
+}
+
+/* Grid de comunicación */
+.comunicacion-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.comunicacion-card {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+}
+
+.comunicacion-card h4 {
+  color: var(--secondary);
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.comunicacion-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.comunicacion-card li {
+  margin-bottom: 1rem;
+  padding: 0.8rem;
+  border-radius: 8px;
+  background: white;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Señales de alerta específicas */
+.señal-categoria {
+  background: linear-gradient(135deg, #fff3cd 0%, #ffeaa7 100%);
+  padding: 2rem;
+  border-radius: 16px;
+  margin-bottom: 1.5rem;
+  box-shadow: var(--shadow);
+}
+
+.señal-categoria h3 {
+  color: var(--secondary);
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+
+.señal-categoria ul {
+  list-style: none;
+  padding: 0;
+}
+
+.señal-categoria li {
+  margin-bottom: 0.8rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.señal-categoria li::before {
+  content: '⚠️';
+  position: absolute;
+  left: 0;
+}
+
+/* Primeros auxilios */
+.auxilios-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+.auxilio-card {
+  background: linear-gradient(135deg, #d1ecf1 0%, #bee5eb 100%);
+  padding: 1.5rem;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: var(--shadow);
+}
+
+.auxilio-card h4 {
+  color: var(--secondary);
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+/* Cuidado del cuidador */
+.cuidado-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+.cuidado-card {
+  background: linear-gradient(135deg, #d4edda 0%, #c3e6cb 100%);
+  padding: 1.5rem;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: var(--shadow);
+}
+
+.cuidado-card h4 {
+  color: var(--secondary);
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+/* Alertas específicas */
+.señal-item.alert {
+  background: linear-gradient(135deg, #f8d7da 0%, #f1b0b7 100%);
+  border-left: 4px solid var(--danger);
+}
+
+.ayuda-inmediata {
+  background: linear-gradient(135deg, #cce7ff 0%, #99ceff 100%);
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin-top: 2rem;
+  text-align: center;
+  border: 2px solid var(--primary);
+}
+
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.5em;
+    color: #6C5CE7; 
+}
+
+p {
+    text-align: center;
+    font-size: 1.2em;
+    margin: 20px 0;
+    padding: 0 20px;
+    line-height: 1.5;
+}
+
+.cards-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px; 
+    flex-wrap: wrap; 
+}
